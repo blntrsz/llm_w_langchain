@@ -25,12 +25,14 @@ def main():
 
     url_pattern = r"https?://\S+|www\.\S+"
 
-    linkedin_profile_url = linkedin_lookup_agent(name="Eden Marco")
-    urls = re.findall(url_pattern, linkedin_profile_url)
+    linkedin_profile_url_result = linkedin_lookup_agent(name="Eden Marco")
+    urls = re.findall(url_pattern, linkedin_profile_url_result)
+
+    linkedin_profile_url = urls[0].rstrip('.').strip()
 
     print(linkedin_profile_url)
-    print(urls[0])
 
-    linkedin_data = scrape_linkedin_profile(linkedin_profile_url=urls[0])
+    linkedin_data = scrape_linkedin_profile(
+        linkedin_profile_url=linkedin_profile_url)
 
     print(chain.run(information=linkedin_data))
