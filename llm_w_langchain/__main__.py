@@ -8,6 +8,7 @@ load_dotenv()
 
 
 class AppNameEnum(str, Enum):
+    first_application = "first_application"
     ice_breaker = "ice_breaker"
 
 
