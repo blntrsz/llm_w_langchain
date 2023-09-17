@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "llm_w_langchain"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = "^23.9.1"
+mypy = "^1.5.1"
+ruff = "^0.0.290"
+pydantic = "^2.3.0"
+langchain = "^0.0.292"
+openai = "^0.28.0"
+huggingface-hub = "^0.17.1"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
